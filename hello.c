@@ -33,14 +33,12 @@ int main() {
 // Function to convert a matrix into sparse matrix format
 void createSparseMatrix(int sparseMatrix[][3], int originalMatrix[][N], int rows, int cols) {
     //WRITE THE FUNCTION DESCRIPTION HERE
-    int rows, int cols) {
-    //WRITE THE FUNCTION DESCRIPTION HERE
     sparseMatrix[0][0] = rows;
     sparseMatrix[0][1] = cols;
     int sparseMatrixRow = 1;
     int value = 0;
-
-
+    
+    
     for(int i=0;i<4;i++){
         for(int j=0;j<4;j++){
             if(originalMatrix[i][j] != 0){
@@ -53,9 +51,9 @@ void createSparseMatrix(int sparseMatrix[][3], int originalMatrix[][N], int rows
         }
     }
     sparseMatrix[0][2] = value;
-
-
-
+    
+    
+    
 
 
 
@@ -69,20 +67,12 @@ void createSparseMatrix(int sparseMatrix[][3], int originalMatrix[][N], int rows
 // Function to print sparse matrix representation
 void printSparseMatrix(int sparseMatrix[][3], int nonZeroCount) {
     //WRITE THE FUNCTION DESCRIPTION HERE
-    
-//WRITE THE FUNCTION DESCRIPTION HERE
     for(int i=0;i<=5;i++){
         for(int j=0;j<=2;j++){
             printf("%d ",sparseMatrix[i][j]);
         }
         printf("\n");
     }    
-
-
-
-
-
-
 
 
 
@@ -148,5 +138,5 @@ bool testPrintSparseMatrix() {
     printSparseMatrix(sparseMatrix, sparseMatrix[0][2]);
 
     // Since printSparseMatrix only prints the output, we assume it passes if the format is correct
-    return true;
+    return true;
 }
